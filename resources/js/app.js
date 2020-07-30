@@ -1,28 +1,19 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+require('./bootstrap');
+import BootstrapVue from 'bootstrap-vue' //Importing
+import Vuex from 'vuex'
+import router from './router'
+ 
+window.Vue = require('vue');
+Vue.use(BootstrapVue)
+Vue.use(Vuex)
 
-Vue.use(VueRouter);
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('tareas-component', require('./components/TareasComponent.vue').default);
+Vue.component('comentarios-component', require('./components/ComentariosComponent.vue').default);
 
-import TareaComponent from "./components/TareasComponent.vue";
-import ComentariosComponent from "./components/ComentariosComponent.vue";
-
-
-
-const router = new VueRouter({
-    mode: "history",
-    routes: [
-        {
-            path: "/",
-            name: "home",
-            component: TareaComponent
-        },
-        {
-            path: "/comments",
-            name: "comentarios",
-            component: ComentariosComponent
-        }
-        
-    ]
+ 
+ 
+const app = new Vue({
+    el: '#app',
+    router
 });
-
-export default router;
