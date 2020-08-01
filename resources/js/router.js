@@ -5,7 +5,7 @@ Vue.use(VueRouter);
 
 import TareaComponent from "./components/TareasComponent.vue";
 import ComentariosComponent from "./components/ComentariosComponent.vue";
-
+import PageComponent from "./components/page_components/Page.vue";
 
 
 const router = new VueRouter({
@@ -14,7 +14,7 @@ const router = new VueRouter({
         {
             path: "/",
             name: "home",
-            component: TareaComponent
+            component: PageComponent
         },
         {
             path: "/comments",
