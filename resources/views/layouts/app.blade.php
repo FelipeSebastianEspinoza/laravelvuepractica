@@ -19,12 +19,22 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}"  >
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}" >
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
 </head>
 <body>
      
-    <!--
+    
     <div >
-       
+          
+         <!--
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -75,10 +85,19 @@
                 </div>
             </div>
         </nav>
-    -->
-        <main class="py-4"  id="app">
+  -->
+        <main class=""  id="app">
             @yield('content')
         </main>
-    </div>
+       
+     </div> 
+    
+     <script  src="{{ asset('plugins/jquery/jquery.min.js') }}"  ></script>
+<!-- Bootstrap -->
+<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}" ></script>
+<!-- overlayScrollbars -->
+<script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"   ></script>
+<!-- AdminLTE App -->
+<script  src="{{ asset('dist/js/adminlte.js') }}" ></script> 
 </body>
 </html>

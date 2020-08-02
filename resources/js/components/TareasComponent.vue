@@ -7,7 +7,7 @@
                 type="button"
                 class="btn btn-primary float-right mb-2"
                 data-toggle="modal"
-                data-target="#create"
+                data-target="#create2"
                 @click="limpiarModal"
             >
                 Nueva categoríafsdd
@@ -240,7 +240,7 @@
         <!--Modal create-->
         <div
             class="modal fade"
-            id="create"
+            id="create2"
             tabindex="-1"
             role="dialog"
             aria-labelledby="exampleModalLabel"
@@ -410,9 +410,12 @@ export default {
             this.categoria = { name: "", description: "" };
 
             axios.post("/categorias", categoriaNueva).then(res => {
-                $("#create").modal("toggle");
+               
                 const categoriaServidor = res.data;
                 this.categorias.push(categoriaServidor);
+               $("#create2").modal("toggle");
+               
+                $('.modal-backdrop').remove();
             });
         },
         eliminarCategoria(atributos) {
